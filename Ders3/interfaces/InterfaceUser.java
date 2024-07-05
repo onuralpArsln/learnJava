@@ -1,3 +1,4 @@
+import Ders3.extendExample.Teacher;
 
 public class InterfaceUser {
     public static void main(String[] args) {
