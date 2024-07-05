@@ -3,7 +3,7 @@ public class Inherit {
 
     public static void main(String[] args) {
 
-        Teacher mahmut = new Teacher("mahmut", "california ilkokulu");
+        TeacherBase mahmut = new TeacherBase("mahmut", "california ilkokulu");
         System.out.println(mahmut.represent());
         HsTeacher mehmet = new HsTeacher("mehmet", "florida fen lisesi", "fizik");
         System.out.println(mehmet.represent());
@@ -12,11 +12,11 @@ public class Inherit {
 
 }
 
-class Teacher {
+class TeacherBase {
     String name;
     String currentSchool;
 
-    public Teacher(String name, String school) {
+    public TeacherBase(String name, String school) {
         this.name = name;
         this.currentSchool = school;
     }
@@ -26,7 +26,7 @@ class Teacher {
     }
 }
 
-class HsTeacher extends Teacher {
+class HsTeacher extends TeacherBase {
 
     String topic;
 
