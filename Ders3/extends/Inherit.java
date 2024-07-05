@@ -39,5 +39,4 @@ class HsTeacher extends Teacher {
     public String represent() {
         return "My names is " + this.name + " and i am a " + this.topic + " teacher at " + this.currentSchool;
     }
-
 }
