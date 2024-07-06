@@ -7,6 +7,8 @@ public class Inherit {
         System.out.println(mahmut.represent());
         HsTeacher mehmet = new HsTeacher("mehmet", "florida fen lisesi", "fizik");
         System.out.println(mehmet.represent());
+        mehmet.tellAge();
+        mehmet.tellAge(360);
 
     }
 
@@ -23,6 +25,14 @@ class TeacherBase {
 
     public String represent() {
         return "My names is " + this.name + " and i am a teacher at " + this.currentSchool;
+    }
+
+    public void tellAge() {
+        System.out.println("480 aylığım");
+    }
+
+    public void tellAge(int age) {
+        System.out.println(age + " aylığım");
     }
 }
 

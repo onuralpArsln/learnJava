@@ -10,8 +10,8 @@ public class main {
 
         System.out.println("foreach: ");
         // bir döngü ile dönmen lazım
-        for (String string : listing) {
-            System.out.println(string);
+        for (String element : listing) {
+            System.out.println(element);
         }
 
         // bir indis değerini değiştirmek mümkün
@@ -26,6 +26,9 @@ public class main {
         }
 
         String[] anotherlist = listing;
+        System.out.println("referanslar");
+        System.out.println(anotherlist);
+        System.out.println(listing);
 
         anotherlist[0] = "referanstan değiştim";
         System.out.println("listing[0]");
