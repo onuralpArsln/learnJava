@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Inherit",
+      "request": "launch",
+      "mainClass": "Inherit",
+      "projectName": "learnJava_f2b0e233"
+    },
+    {
+      "type": "java",
+      "name": "InterfaceUser",
+      "request": "launch",
+      "mainClass": "InterfaceUser",
+      "projectName": "learnJava_f2b0e233"
+    },
+    {
+      "type": "java",
       "name": "main",
       "request": "launch",
       "mainClass": "Ders3.arrayApplication.main",
