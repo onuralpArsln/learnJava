@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "main",
+      "request": "launch",
+      "mainClass": "main",
+      "projectName": "learnJava_f2b0e233"
+    },
+    {
+      "type": "java",
       "name": "Inherit",
       "request": "launch",
       "mainClass": "Inherit",

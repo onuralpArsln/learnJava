@@ -8,6 +8,7 @@ public class main {
         // listeyi yazdırmak pythondaki gibi direkt olmaz
         System.out.println(listing);
 
+        System.out.println("foreach: ");
         // bir döngü ile dönmen lazım
         for (String string : listing) {
             System.out.println(string);
@@ -15,6 +16,27 @@ public class main {
 
         // bir indis değerini değiştirmek mümkün
         listing[0] = "değiştim";
+        System.out.println("listing[0]");
+        System.out.println(listing[0]);
+        System.out.println("listing[0]");
+
+        System.out.println("for loop : ");
+        for (int i = 0; i < listing.length; i++) {
+            System.out.println(listing[i]);
+        }
+
+        String[] anotherlist = listing;
+
+        anotherlist[0] = "referanstan değiştim";
+        System.out.println("listing[0]");
+        System.out.println(listing[0]);
+
+        System.out.println("listing[0]");
+
+        String[] onemorelist;
+        onemorelist = listing;
+        onemorelist[0] = "it is one more ";
+        System.out.println("listing[0]");
         System.out.println(listing[0]);
 
     }
