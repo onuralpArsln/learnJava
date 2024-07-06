@@ -1,70 +1,77 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "HelloWorld",
-            "request": "launch",
-            "mainClass": "HelloWorld",
-            "projectName": "learnJava_8fd9fd36"
-        },
-        {
-            "type": "java",
-            "name": "Inherit",
-            "request": "launch",
-            "mainClass": "Inherit",
-            "projectName": "learnJava_8fd9fd36"
-        },
-        {
-            "type": "java",
-            "name": "learn",
-            "request": "launch",
-            "mainClass": "learn",
-            "projectName": "learnJava_8fd9fd36"
-        },
-        {
-            "type": "java",
-            "name": "linkedList",
-            "request": "launch",
-            "mainClass": "linkedList",
-            "projectName": "learnJava_8fd9fd36"
-        },
-        {
-            "type": "java",
-            "name": "main",
-            "request": "launch",
-            "mainClass": "main",
-            "projectName": "learnJava_8fd9fd36"
-        },
-        {
-            "type": "java",
-            "name": "multiThreading",
-            "request": "launch",
-            "mainClass": "multiThreading",
-            "projectName": "learnJava_8fd9fd36"
-        },
-        {
-            "type": "java",
-            "name": "newClass",
-            "request": "launch",
-            "mainClass": "newClass",
-            "projectName": "learnJava_8fd9fd36"
-        },
-        {
-            "type": "java",
-            "name": "runner",
-            "request": "launch",
-            "mainClass": "runner",
-            "projectName": "learnJava_8fd9fd36"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "main",
+      "request": "launch",
+      "mainClass": "Ders3.arrayApplication.main",
+      "projectName": "learnJava_f2b0e233"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "HelloWorld",
+      "request": "launch",
+      "mainClass": "HelloWorld",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "Inherit",
+      "request": "launch",
+      "mainClass": "Inherit",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "learn",
+      "request": "launch",
+      "mainClass": "learn",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "linkedList",
+      "request": "launch",
+      "mainClass": "linkedList",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "main",
+      "request": "launch",
+      "mainClass": "main",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "multiThreading",
+      "request": "launch",
+      "mainClass": "multiThreading",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "newClass",
+      "request": "launch",
+      "mainClass": "newClass",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "runner",
+      "request": "launch",
+      "mainClass": "runner",
+      "projectName": "learnJava_8fd9fd36"
+    }
+  ]
 }
