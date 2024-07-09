@@ -3,20 +3,22 @@ public class Inherit {
 
     public static void main(String[] args) {
 
-        Teacher mahmut = new Teacher("mahmut", "california ilkokulu");
+        TeacherBase mahmut = new TeacherBase("mahmut", "california ilkokulu");
         System.out.println(mahmut.represent());
         HsTeacher mehmet = new HsTeacher("mehmet", "florida fen lisesi", "fizik");
         System.out.println(mehmet.represent());
+        mehmet.tellAge();
+        mehmet.tellAge(360);
 
     }
 
 }
 
-class Teacher {
+class TeacherBase {
     String name;
     String currentSchool;
 
-    public Teacher(String name, String school) {
+    public TeacherBase(String name, String school) {
         this.name = name;
         this.currentSchool = school;
     }
@@ -24,9 +26,17 @@ class Teacher {
     public String represent() {
         return "My names is " + this.name + " and i am a teacher at " + this.currentSchool;
     }
+
+    public void tellAge() {
+        System.out.println("480 aylığım");
+    }
+
+    public void tellAge(int age) {
+        System.out.println(age + " aylığım");
+    }
 }
 
-class HsTeacher extends Teacher {
+class HsTeacher extends TeacherBase {
 
     String topic;
 

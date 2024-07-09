@@ -7,17 +7,17 @@ public class InterfaceUser {
 }
 
 // Interface tanımları
-interface Teaching {
+interface ITeaching {
     void teachTopic();
 
     void assignHomework();
 }
 
-interface Authority {
-    void slinceClass();
+interface IAuthority {
+    void silenceClass();
 }
 
-class Teacher implements Teaching {
+class Teacher implements ITeaching, IAuthority {
     public Teacher() {
         System.out.println("öğretmeye hazırım");
     }
@@ -31,5 +31,10 @@ class Teacher implements Teaching {
     public void assignHomework() {
         System.out.println(" 4 milyon soru çözün");
 
+    }
+
+    @Override
+    public void silenceClass() {
+        System.out.println("sınıf sus");
     }
 }
