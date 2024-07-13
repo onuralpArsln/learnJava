@@ -2,11 +2,11 @@ package people;
 
 public class HumanPatient extends HumanBase {
 
-    String semptoms;
+    String symptoms;
 
-    public HumanPatient(String name, int age, String semptomps) {
+    public HumanPatient(String name, int age, String symptoms) {
         super(name, age);
-        this.semptoms = semptomps;
+        this.symptoms = symptoms;
 
     }
 
