@@ -5,3 +5,12 @@ yolcular inebilsin
 
 odev 2 hastane modelini ornek alarak kendi modelini 
 yap yada hastaneye ekleme yap
+
+
+20.07.2024
+
+odev 1 ders4 example GetInCar yapıldı getout yap 
+yolcular inebilsin
+
+odev 2 hastane modelini ornek alarak kendi modelini 
+yap yada hastaneye ekleme yap

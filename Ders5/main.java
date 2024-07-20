@@ -15,6 +15,8 @@ public class main {
         testPrinter.printPaper("cant erase me", testPaper);
         System.out.println(testPaper.getContent());
 
-        
+        Flyer testFlyer = testPrinter.printFlyer("flyer");
+        System.out.println(testFlyer.note);
+
     }
 }

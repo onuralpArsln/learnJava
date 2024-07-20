@@ -9,6 +9,7 @@ public class Printer {
 
     public Paper printPaper(String note, Paper paper) {
         paper.write(note, false);
+        
         return paper;
 
     }

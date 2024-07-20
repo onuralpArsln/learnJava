@@ -5,7 +5,9 @@ public class Paper {
     private String note = "";
     private boolean isErasable = true;
 
+    // getter method
     public String getContent() {
+
         return this.note;
     }
 
