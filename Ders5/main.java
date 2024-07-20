@@ -15,5 +15,6 @@ public class main {
         testPrinter.printPaper("cant erase me", testPaper);
         System.out.println(testPaper.getContent());
 
+        
     }
 }
