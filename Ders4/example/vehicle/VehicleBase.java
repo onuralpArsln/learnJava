@@ -30,4 +30,16 @@ public class VehicleBase {
         return false;
     }
 
+    public boolean GetOutCar(HumanBase passenger) {
+        for (int i = 0; i < this.passengers.length; i++) {
+            if (this.passengers[i] == passenger) {
+                this.passengers[i] = null;
+                System.out.println(passenger.name + "yolcu arabadan indi");
+                return true;
+            }
+        }
+        System.out.println("yolcu arabada değil");
+        return false;
+    }
+
 }
