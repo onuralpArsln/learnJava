@@ -42,6 +42,12 @@ public class main {
         testVehicle.GetInCar(testHuman2);
         testVehicle.GetInCar(testHuman6);
 
+        testVehicle.GetOutCar(testHuman5);
+        testVehicle.GetOutCar(testHuman3);
+        testVehicle.GetOutCar(testHuman4);
+        testVehicle.GetOutCar(testHuman2);
+        testVehicle.GetOutCar(testHuman5);
+
     }
 
 }
