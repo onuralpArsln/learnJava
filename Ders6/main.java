@@ -19,6 +19,13 @@ public class main {
         sefer.append(tas4);
         System.out.println(sefer.indexTas(8).yemek);
 
+        // tastan bir class extend aldım
+
+        newTas tas5 = new newTas("kebap");
+
+        sefer.append(tas5);
+        System.out.println(sefer.indexTas(4).yemek);
+
     }
 
 }
@@ -68,4 +75,14 @@ class Tas {
     public Tas(String temp) {
         this.yemek = temp;
     }
+}
+
+// tastan extendlenen bir class
+class newTas extends Tas {
+    int val;
+
+    public newTas(String temp) {
+        super(temp);
+    }
+
 }
