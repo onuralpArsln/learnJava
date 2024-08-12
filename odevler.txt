@@ -14,3 +14,13 @@ yolcular inebilsin
 
 odev 2 hastane modelini ornek alarak kendi modelini 
 yap yada hastaneye ekleme yap
+
+
+sana ödev 
+
+ders7 linklistin aynısından yap
+yapablirsen initialda next yaparak değil direkt lastNodea append yap
+
+bana ödev
+
+string ve int node val yazımı için çözüm
