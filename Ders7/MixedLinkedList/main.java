@@ -6,10 +6,8 @@ public class main {
         LinkList test = new LinkList();
 
         test.append(5);
-        System.out.println(test.lastNode);
-
-        test.append("5");
-        System.out.println(test.lastNode);
+        test.append("five");
+        test.printVals();
 
     }
 
@@ -56,10 +54,20 @@ class LinkList {
 
     }
 
+    public void printVals() {
+        Node searchNode = this.intialNode;
+        while (searchNode != null) {
+            System.out.println(searchNode.getData());
+            searchNode = searchNode.nextNode;
+        }
+    }
+
 }
 
-class Node {
+abstract class Node {
     Node nextNode = null;
+
+    public abstract Object getData();
 
 }
 
@@ -70,6 +78,11 @@ class IntNode extends Node {
         this.val = val;
     }
 
+    @Override
+    public Integer getData() {
+        return this.val;
+    }
+
 }
 
 class StringNode extends Node {
@@ -77,6 +90,11 @@ class StringNode extends Node {
 
     public StringNode(String val) {
         this.val = val;
+    }
+
+    @Override
+    public String getData() {
+        return this.val;
     }
 
 }

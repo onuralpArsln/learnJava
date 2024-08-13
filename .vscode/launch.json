@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "main",
+      "request": "launch",
+      "mainClass": "main",
+      "projectName": "learnJava_f9db2cb8"
+    },
+    {
+      "type": "java",
       "name": "Node",
       "request": "launch",
       "mainClass": "Ders7.LinkedList.src.Node",
