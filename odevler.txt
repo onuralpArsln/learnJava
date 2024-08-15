@@ -24,3 +24,10 @@ yapablirsen initialda next yaparak değil direkt lastNodea append yap
 bana ödev
 
 string ve int node val yazımı için çözüm
+
+
+
+15.08 
+
+queue örneği yap
+linklist örneği
