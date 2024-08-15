@@ -1,0 +1,11 @@
+Tree -> Nodeların birden çok dalı olan veri yapısı
+
+Binary Tree-> Node başı iki Child Note
+Trenary-> parent nodelarda üç child notede
+
+FullBinary -> her node 2 ya da 0 child
+Complete -> her katman tam dolu son katman soldan sağa dolduruluyor ise
+PerfectBinary -> Simetrik tam dolu all childs same level
+Balanced -> sağ ve sol branchler arasında node farkı en fazla 1 
+
+Degenerate(or Pathological) Binary Tree-> her parent sadece 1 child 
