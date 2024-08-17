@@ -31,3 +31,15 @@ string ve int node val yazımı için çözüm
 
 queue örneği yap
 linklist örneği
+
+
+
+17.08 
+
+tek parçalı bir recursive 
+
+iki parçalı başlangıç artı rec şeklinde recursive 
+
+queue
+
+basic tree tekrarı
