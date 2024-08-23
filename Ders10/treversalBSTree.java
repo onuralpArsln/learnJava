@@ -15,6 +15,9 @@ public class treversalBSTree {
         System.out.println(testTree.root.nodeLeft.nodeLeft.val);
         System.out.println(testTree.root.nodeRight.val);
 
+        String route = testTree.roadMap(6);
+        System.out.println(route);
+
     }
 
 }
@@ -71,6 +74,49 @@ class BST {
 
     }
 
+    public String roadMap(int val) {
+        String route = "";
+        if (this.root == null) {
+            route = route + " Null";
+            return route;
+        } else if (this.root.val == val) {
+            return route;
+        } else if (this.root.val > val) {
+            route = route + " Left";
+            TreeNode newStep = root.nodeLeft;
+            route = route + this.roadMapRec(val, newStep);
+            return route;
+        } else {
+            route = route + " Right";
+            TreeNode newStep = root.nodeRight;
+            route = route + this.roadMapRec(val, newStep);
+            return route;
+        }
+
+    }
+
+    private String roadMapRec(int val, TreeNode step) {
+        String route = "";
+        if (step == null) {
+            route = route + " Null";
+            return route;
+        } else if (step.val == val) {
+            return route;
+        } else if (step.val > val) {
+            route = route + " Left";
+            TreeNode newStep = step.nodeLeft;
+            route = route + this.roadMapRec(val, newStep);
+            return route;
+
+        } else {
+            route = route + " Right";
+            TreeNode newStep = step.nodeRight;
+            route = route + this.roadMapRec(val, newStep);
+            return route;
+
+        }
+
+    }
 }
 
 class TreeNode {
