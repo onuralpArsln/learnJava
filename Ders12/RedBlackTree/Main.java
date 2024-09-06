@@ -12,18 +12,20 @@ ve silme işlemlerinde daha verimli olabilir.
 Uygulama Alanı: Red-Black ağaçları genellikle sık veri 
 ekleme ve silme işlemlerinin yapıldığı sistemlerde 
 (örneğin, işletim sistemleri, harici veri yapıları) kullanılır.
- * 
- * 
- Red-Black Ağaçlarının Özellikleri
-Red-Black ağaçları, aşağıdaki özellikleri sağlar:
+ 
 
-Her düğüm ya kırmızı ya da siyah.
-Kök düğüm her zaman siyah.
-Her yaprak (veya boş düğüm) siyah.
-Bir kırmızı düğümün çocukları her zaman siyah olmalıdır (yani, iki kırmızı düğüm yan yana olamaz).
-Her düğümden yapraklara kadar olan yollar, aynı sayıda siyah düğüm içerir (bu sayıya “black-height” denir).
+          55 (BLACK)
+         /         \
+     40 (BLACK)  65 (RED)
+                /       \
+            60 (BLACK)  70 (BLACK)
+                     / 
+                 63 (RED) 
+                /   
+            67 (RED) 
 
- * 
+
+
  */
 
 public class Main {
