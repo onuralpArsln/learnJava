@@ -1,6 +1,7 @@
 /*
  AVL Ağacı
 ______________________
+Adelson-Velsky and Landis tree
 Dengeleme Mekanizması: Her düğüm için, sol ve sağ alt ağaçların yükseklik farkı en fazla 1 olabilir. 
 Bu farkı koruyabilmek için her ekleme ve silme işleminde ağaç dengelemeleri yapılır.
 Rotasyonlar: Dengeyi sağlamak için dört farklı rotasyon kullanılır: 
