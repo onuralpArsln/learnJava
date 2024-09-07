@@ -4,7 +4,9 @@ Red-Black Ağacı
 ____________________
 Also known as symmetric binary B-tree.
 Dengeleme Mekanizması: Kırmızı-siyah ağaçlar, düğümlere kırmızı veya siyah renk atayarak dengeyi sağlar.
-Kırmızı düğümler arka arkaya gelmez ve her yapraktan köke kadar olan yol üzerinde siyah düğüm sayısı aynıdır.
+Kırmızı düğümler arka arkaya gelmez 
+ve her yapraktan köke kadar olan yol üzerinde siyah düğüm sayısı aynıdır.
+Kök ve yapraklar her zaman siyahtır.
 Rotasyonlar: Dengelemeyi sağlamak için rotasyon ve yeniden renklendirme yapılır. 
 Ancak AVL ağaçlarına kıyasla daha az rotasyon yapılır.
 Ancak daha az sık rotasyon yaptıkları için özellikle sık ekleme 
@@ -19,10 +21,9 @@ ekleme ve silme işlemlerinin yapıldığı sistemlerde
      40 (BLACK)  65 (RED)
                 /       \
             60 (BLACK)  70 (BLACK)
-                     / 
-                 63 (RED) 
-                /   
-            67 (RED) 
+                \           /
+            63 (RED)       67 (RED) 
+               
 
 
 

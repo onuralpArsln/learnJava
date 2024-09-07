@@ -49,9 +49,9 @@ ________________________________
  /
 y
 
-    y
+    z
    / \
-  x   z
+  x   y
 
 Çift Sol-Sağ (Left-Right Rotation)
 __________________________________
@@ -67,9 +67,9 @@ __________________________________
       \
        y
 
-    y
+    z
    / \
-  x   z
+  x   y
 
 
  */
@@ -149,14 +149,19 @@ class AVLTree {
 
     // Sol dönüş işlemi
     Node leftRotate(Node x) {
+        // yeni root y olarak tutulmuş
         Node y = x.right;
+        // b den aya taşınacak ağacı tutmuş
         Node T2 = y.left;
 
         // Döndürme işlemi
+        // yeni rootun leftine eski rootu atmış
         y.left = x;
+        // yeni rootun sol ağacını eskii rootun sağına atmış
         x.right = T2;
 
         // Yükseklikleri güncelle
+        // kot farkı bina ve emlakçı mantığı
         x.height = max(height(x.left), height(x.right)) + 1;
         y.height = max(height(y.left), height(y.right)) + 1;
 
