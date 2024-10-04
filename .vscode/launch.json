@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "sortBasics",
+      "request": "launch",
+      "mainClass": "sortBasics",
+      "projectName": "learnJava_f9db2cb8"
+    },
+    {
+      "type": "java",
       "name": "AVLTree",
       "request": "launch",
       "mainClass": "AVLTree",
