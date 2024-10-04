@@ -3,12 +3,16 @@
 //  bölme işlemi array başına bir eleman kalana kadar 
 // devam eder 
 
-
 public class mergeSort {
 
-    public static void arraySplitter(int[] arr, int left, int right){
+    // bölme işlemi nasıl gerçekleşiyor onu görelim
+    public static void arraySplitter(int[] arr, int left, int right) {
 
-         if (left < right) {
+        // left step array başı right sonu pozisyonu olarak başladı
+        // left -> sıfır ve right -> 5 mesela (6 eleman için)
+        // sol sağdan küçük olduğu sürece (sol 2 sağ 4) arada eleman vardır işlem
+        // yapılır
+        if (left < right) {
             // Print the current array segment
             System.out.print("Current Split: ");
             for (int i = left; i <= right; i++) {
@@ -28,7 +32,6 @@ public class mergeSort {
             // Print single element when it's reached
             System.out.println("Single Element: " + arr[left]);
         }
-
 
     }
 
