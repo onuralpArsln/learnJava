@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "mergeSort",
+      "request": "launch",
+      "mainClass": "mergeSort",
+      "projectName": "learnJava_f9db2cb8"
+    },
+    {
+      "type": "java",
       "name": "sortBasics",
       "request": "launch",
       "mainClass": "sortBasics",
