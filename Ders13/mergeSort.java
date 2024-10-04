@@ -13,24 +13,26 @@ public class mergeSort {
         // sol sağdan küçük olduğu sürece (sol 2 sağ 4) arada eleman vardır işlem
         // yapılır
         if (left < right) {
-            // Print the current array segment
-            System.out.print("Current Split: ");
+            // şuan neyi bölmeye çalışıyoruz ekrana yazalım
+            System.out.print("Mevcut array: ");
+            // left ve right arasındaki değerleri yazalım
+            // (bu sadece görelim diye normalde gereksiz)
             for (int i = left; i <= right; i++) {
                 System.out.print(arr[i] + " ");
             }
             System.out.println();
 
-            // Find the midpoint
+            // orta noktayı bulalım
             int mid = (left + right) / 2;
 
-            // Recursively split the left half
+            // orta ve sol arasını bölelim
             arraySplitter(arr, left, mid);
 
-            // Recursively split the right half
+            // orta ve sağ arasını bölelim
             arraySplitter(arr, mid + 1, right);
         } else if (left == right) {
-            // Print single element when it's reached
-            System.out.println("Single Element: " + arr[left]);
+            // elimizde tek eleman kalınca konu kapanır bölme durur
+            System.out.println("sona kalan: " + arr[left]);
         }
 
     }
