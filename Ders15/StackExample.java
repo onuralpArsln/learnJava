@@ -1,7 +1,7 @@
 class Stack {
-    private int maxSize;    // Maximum size of the stack
+    private int maxSize; // Maximum size of the stack
     private int[] stackArray; // Array to hold stack elements
-    private int top;        // Points to the top of the stack
+    private int top; // Points to the top of the stack
 
     // Constructor to initialize the stack
     public Stack(int size) {
