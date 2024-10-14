@@ -9,6 +9,13 @@
       "name": "mergeSort",
       "request": "launch",
       "mainClass": "mergeSort",
+      "projectName": "learnJava_8fd9fd36"
+    },
+    {
+      "type": "java",
+      "name": "mergeSort",
+      "request": "launch",
+      "mainClass": "mergeSort",
       "projectName": "learnJava_f9db2cb8"
     },
     {

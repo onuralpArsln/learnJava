@@ -105,6 +105,14 @@ public class mergeSort {
     public static void main(String[] args) {
         int[] arr = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         arraySplitter(arr, 0, arr.length - 1);
+
+        int[] arr2 = { 0, 51, 23, 37, 14, 5, 66, 17, 283, 39 };
+
+        mergeSortApplied(arr2, 0, arr2.length - 1);
+        for (int i : arr2) {
+            System.out.println(i);
+
+        }
     }
 
 }
