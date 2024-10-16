@@ -45,6 +45,8 @@ public class mergeSort {
     // sağ sol sıralı bunları ortada sıralayıp
     // 2 4 5 6 yapar
     public static void merge(int[] arr, int left, int mid, int right) {
+        // elinde iki adet sıralı array oluşturur ve bunları ekler
+
         // Sol ve sağ alt dizilerin boyutları
         int n1 = mid - left + 1;
         int n2 = right - mid;
@@ -113,6 +115,7 @@ public class mergeSort {
             System.out.println(i);
 
         }
+
     }
 
 }

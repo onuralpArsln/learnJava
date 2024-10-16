@@ -7,6 +7,7 @@ public class IncrementDecrementExample {
         // Example 1: Pre-Increment
         System.out.println("Example 1: Pre-Increment (++x)");
         System.out.println("Before: x = " + x);
+
         int a = ++x; // x is incremented first, then assigned to a
         System.out.println("After ++x: x = " + x + ", a = " + a);
 
@@ -33,5 +34,16 @@ public class IncrementDecrementExample {
         System.out.println("Before: y = " + y);
         int d = y--; // y is assigned to d first, then decremented
         System.out.println("After y--: y = " + y + ", d = " + d);
+
+        x = 5;
+        System.out.println(x);
+        x++;
+        System.out.println(x);
+
+        x = 5;
+        System.out.println(x);
+        ++x;
+        System.out.println(x);
+
     }
 }
