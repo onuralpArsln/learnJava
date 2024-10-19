@@ -1,16 +1,24 @@
 class Stack {
-    private int maxSize; // Maximum size of the stack
-    private int[] stackArray; // Array to hold stack elements
-    private int top; // Points to the top of the stack
 
-    // Constructor to initialize the stack
+    // array boyutları sabit bu yüzden en fazla miktar limiti belli olarak bir array
+    // oluşturulur
+    // stack en üstteki elementi belirlediğinden top elementi gösteren bir değişken
+    // oluşturulur
+    // matematiksel işlemlerde parantezler böyle hesaplanır
+
+    private int maxSize;
+    private int[] stackArray;
+    private int top;
+
+    // Constructor
     public Stack(int size) {
         maxSize = size;
         stackArray = new int[maxSize];
-        top = -1; // Stack is empty when top is -1
+        top = -1; // stack boşken top -1 olur 0 olsa stackte bir eleman vardır
     }
 
-    // Push method to add an element to the stack
+    // push methodu ile ekleme yapılır
+    // ++top sayesinde önce top değer artar sonra ekleme yapılır
     public void push(int value) {
         if (isFull()) {
             System.out.println("Stack is full. Cannot push " + value);
