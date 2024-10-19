@@ -19,6 +19,29 @@ public class preIncvsposrInc {
             System.out.println(element);
         }
 
+        for (int i = 0; i < 5; i++) { // Post-increment
+            System.out.println("i = " + i);
+        }
+
+        for (int i = 0; i < 5; ++i) { // pre-increment
+            System.out.println("i = " + i);
+        }
+
     }
 
 }
+
+/*
+ * 
+ * post increment x++
+ * x arttırılmadan önce bir kopyası oluşur
+ * bu hafıza kaplar geçici değişken performansı
+ * azaltır
+ * 
+ * 
+ * pre increment ++x
+ * kopya oluşmaz hafıza kaplamaz
+ * 
+ * ama performans farklı gözden çıkarılabilir
+ * 
+ */
