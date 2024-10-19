@@ -19,12 +19,34 @@ public class preIncvsposrInc {
             System.out.println(element);
         }
 
+        System.out.println("Post-increment");
         for (int i = 0; i < 5; i++) { // Post-increment
             System.out.println("i = " + i);
         }
 
+        System.out.println("pre-increment");
+
         for (int i = 0; i < 5; ++i) { // pre-increment
             System.out.println("i = " + i);
+        }
+
+        int[] mySecondArr = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int returner = 3;
+
+        System.out.println("post decrement");
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println(mySecondArr[returner--]);
+
+        }
+
+        System.out.println("pre decrement");
+
+        returner = 3;
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println(mySecondArr[--returner]);
+
         }
 
     }

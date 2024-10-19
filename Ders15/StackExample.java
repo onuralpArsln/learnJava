@@ -29,12 +29,18 @@ class Stack {
 
     // Pop metodu en üstteki elemanı çıkartır
     // çıkartma işlemi aslında bir silme yapmaz en üst sırasını aşağı alır sadece
+    // bir çok sistemde databaseden silme yapmak yerine de silindi olarak
+    // işartelerinir
+    // aynı cihaz hafızası yönetimi gibi
+    // bu hem veri kurtarmayı mümkün kılar hemde mevcut veri yerine bir şey yazmak
+    // ve
+    // sonra onu silip yeni değeri yazmak gibi terkarlı işlemi önler
     public int pop() {
         if (this.isEmpty()) {
             System.out.println("Stack is empty. Cannot pop");
-            return -1; // Return -1 if the stack is empty
+            return -1; // -1 genelde bir hata dönüşü olarak kullanılır eğer boş ise -1 döndürüyor
         } else {
-            return stackArray[top--]; // Return the top element and decrement top
+            return stackArray[top--]; // burada önce elementi okur sonra ise döndürme sırasını düşürür
         }
     }
 
