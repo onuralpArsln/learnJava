@@ -27,9 +27,10 @@ class Stack {
         }
     }
 
-    // Pop method to remove the top element from the stack
+    // Pop metodu en üstteki elemanı çıkartır
+    // çıkartma işlemi aslında bir silme yapmaz en üst sırasını aşağı alır sadece
     public int pop() {
-        if (isEmpty()) {
+        if (this.isEmpty()) {
             System.out.println("Stack is empty. Cannot pop");
             return -1; // Return -1 if the stack is empty
         } else {
