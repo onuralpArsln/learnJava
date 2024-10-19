@@ -4,7 +4,7 @@ public class QuickSortExample {
 
     // QuickSort algoritması
     public static void quickSort(int[] arr, int low, int high) {
-        if (low < high) {
+        if (low < high) { // sona kalınca durması için
             // Diziyi pivot noktasına göre ikiye ayır (partition işlemi)
             // Sol taraftan (ilk elemandan) gelirken pivot değerinden büyük elemanı bul
             // Sağ taraftan (son elemandan) gelirken pivot değerinden küçük elemanı bul ve
