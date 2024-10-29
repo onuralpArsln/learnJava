@@ -1,3 +1,5 @@
+package TextEditor;
+
 import java.util.Scanner;
 
 public class TextEditor {
@@ -6,6 +8,9 @@ public class TextEditor {
 
         Scanner ScannerObj = new Scanner(System.in); // scanner reads input
         System.out.println("Welcome to STE SimpleTextEditor");
+
+        SimpleStack undoStack = new SimpleStack(256);
+        SimpleStack redoStack = new SimpleStack(256);
 
         while (true) {
             String input = ScannerObj.nextLine();
@@ -32,6 +37,11 @@ public class TextEditor {
 
             case "type":
                 return memory + input;
+
+            case "delete":
+                System.out.println(
+                        "Available commands:\n  greet <name> - Greets the user.\n  add <num1> <num2> - Adds two numbers.\n  exit - Exits the program.");
+                break;
 
             case "undo":
                 System.out.println(
