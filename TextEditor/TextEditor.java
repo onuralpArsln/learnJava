@@ -4,11 +4,11 @@ public class TextEditor {
 
     public static void main(String[] args) {
 
-        Scanner myObj = new Scanner(System.in); // Create a Scanner object
-        System.out.println("Enter username");
+        Scanner ScannerObj = new Scanner(System.in); // scanner reads input
+        System.out.println("Welcome to STE SimpleTextEditor");
 
         while (true) {
-            String input = myObj.nextLine();
+            String input = ScannerObj.nextLine();
             if (input.equalsIgnoreCase("EXIT")) {
                 break;
             } else if (-1 == input.indexOf(" ")) {
