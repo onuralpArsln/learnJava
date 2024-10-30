@@ -9,8 +9,12 @@ public class SimpleStackTest {
         testStack.insert(command, input);
         String[] testArray = { command, input };
         String[] resultArray = testStack.pop();
-        System.out.println(testArray[0] + testArray[1]);
-        System.out.println(resultArray[0] + resultArray[1]);
+        if (Arrays.equals(testArray, resultArray)) {
+            System.out.println("test Passed");
+        } else {
+            System.out.println("test Failed");
+
+        }
 
     }
 

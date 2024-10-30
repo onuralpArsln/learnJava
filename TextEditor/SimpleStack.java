@@ -12,7 +12,6 @@ public class SimpleStack {
 
     public void insert(String command, String input) {
         String[] process = { command, input };
-        System.out.println("prcess is " + process[0] + process[1]);
         commandMem[++stepPointer] = process;
 
     }
