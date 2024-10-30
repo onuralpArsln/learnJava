@@ -3,7 +3,7 @@ package TextEditor;
 public class SimpleStack {
     private String[][] commandMem;
 
-    private int stepPointer = 0;
+    private int stepPointer = -1;
 
     public SimpleStack(int Size) {
         commandMem = new String[Size][2];
@@ -12,11 +12,14 @@ public class SimpleStack {
 
     public void insert(String command, String input) {
         String[] process = { command, input };
-        commandMem[stepPointer] = process;
-        stepPointer++;
+        System.out.println("prcess is " + process[0] + process[1]);
+        commandMem[++stepPointer] = process;
+
     }
 
-    public void pop() {
+    public String[] pop() {
+
+        return commandMem[stepPointer--];
 
     }
 
