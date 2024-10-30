@@ -2,50 +2,66 @@ package TextEditor;
 
 import java.util.Scanner;
 
-public class SimpleTextEditor {
+public class SimpleTextEditor implements Runnable {
+    String memory = "";
+    SimpleStack undoStack = new SimpleStack(256);
+    SimpleStack redoStack = new SimpleStack(256);
 
-    public static void main(String[] args) {
-
+    public void run() {
         Scanner ScannerObj = new Scanner(System.in); // scanner reads input
         System.out.println("Welcome to STE SimpleTextEditor");
 
-        SimpleStack undoStack = new SimpleStack(256);
-        SimpleStack redoStack = new SimpleStack(256);
-
         while (true) {
-            String input = ScannerObj.nextLine();
-            if (input.equalsIgnoreCase("EXIT")) {
+            String command = ScannerObj.nextLine();
+            if (command.equalsIgnoreCase("EXIT")) {
                 break;
-            } else if (-1 == input.indexOf(" ")) {
-                System.out.println("Faulty Command ");
-                continue;
-
             }
-            String[] parts = input.split(" ", 2);
+            /*
+             * else if (-1 == input.indexOf(" ")) {
+             * System.out.println("Faulty Command ");
+             * continue;
+             * }
+             */
 
-            System.out.println("Enter username " + input);
+            memory = handleCommand(command, memory);
 
         }
-
     }
 
-    private String handleCommand(String command, String input, String memory) {
+    private String handleCommand(String command, String memory) {
+
+        String input;
+
+        if (-1 == command.indexOf(" ")) {
+            input = "";
+        } else {
+            String[] parts = command.split(" ", 2);
+            command = parts[0];
+            input = parts[1];
+        }
+
         switch (command.toLowerCase()) {
             case "show":
                 System.out.println(memory);
                 return memory;
 
             case "type":
+                undoStack.insert("type", input);
                 return memory + input;
 
             case "delete":
-                System.out.println(
-                        "Available commands:\n  greet <name> - Greets the user.\n  add <num1> <num2> - Adds two numbers.\n  exit - Exits the program.");
+                int n = memory.length();
+                if (n > 0) {
+                    String last = String.valueOf(memory.charAt(n - 1));
+                    undoStack.insert("type", last);
+                    memory = memory.substring(0, n - 1);
+                } else {
+                    System.out.print("Nothing to Delete");
+
+                }
                 break;
 
             case "undo":
-                System.out.println(
-                        "Available commands:\n  greet <name> - Greets the user.\n  add <num1> <num2> - Adds two numbers.\n  exit - Exits the program.");
                 break;
 
             case "redo":
@@ -58,6 +74,11 @@ public class SimpleTextEditor {
                 return memory;
         }
         return memory;
+    }
+
+    public void SelfTest() {
+        System.out.println("Unknown command. Type 'help' for a list of commands.");
+
     }
 }
 
