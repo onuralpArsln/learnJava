@@ -2,7 +2,7 @@ package TextEditor;
 
 import java.util.Scanner;
 
-public class TextEditor {
+public class SimpleTextEditor {
 
     public static void main(String[] args) {
 

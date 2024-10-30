@@ -1,19 +1,23 @@
 package TextEditor;
 
 public class SimpleStack {
-    private String[] charMem;
-    private String[] commandMem;
+    private String[][] commandMem;
+
     private int stepPointer = 0;
 
     public SimpleStack(int Size) {
-        charMem = new String[Size];
-        commandMem = new String[Size];
+        commandMem = new String[Size][2];
+
     }
 
-    private void insert() {
+    public void insert(String command, String input) {
+        String[] process = { command, input };
+        commandMem[stepPointer] = process;
+        stepPointer++;
     }
 
-    private void pop() {
+    public void pop() {
+
     }
 
 }
