@@ -23,7 +23,3 @@ public class SimpleStack {
     }
 
 }
-
-
-
-
