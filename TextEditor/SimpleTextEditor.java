@@ -16,12 +16,6 @@ public class SimpleTextEditor implements Runnable {
             if (command.equalsIgnoreCase("EXIT")) {
                 break;
             }
-            /*
-             * else if (-1 == input.indexOf(" ")) {
-             * System.out.println("Faulty Command ");
-             * continue;
-             * }
-             */
 
             memory = handleCommand(command, memory);
 
@@ -43,7 +37,7 @@ public class SimpleTextEditor implements Runnable {
         switch (command.toLowerCase()) {
             case "show":
                 System.out.println(memory);
-                return memory;
+                return memory; // ancak bir return vermeyeceksen sona break koymalısın
 
             case "type":
                 undoStack.insert("type", input);
