@@ -5,7 +5,7 @@ public class SimpleStack {
 
     private int stepPointer = -1;
 
-    public SimpleStack(int Size) {
+    public  SimpleStack(int Size) {
         commandMem = new String[Size][2];
 
     }
