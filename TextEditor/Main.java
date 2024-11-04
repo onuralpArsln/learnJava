@@ -8,3 +8,5 @@ public class Main {
         ste.run();
     }
 }
+
+// java TextEditor.Main
