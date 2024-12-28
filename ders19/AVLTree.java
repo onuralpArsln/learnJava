@@ -1,27 +1,16 @@
 public class AVLTree {
 
-    // AVL ağacındaki düğüm yapısı
-    class Node {
-        int key;
-        Node left, right;
-        int height;
-
-        public Node(int key) {
-            this.key = key;
-            this.height = 1;
-        }
-    }
-
+    // düğüm en altta tanımlı
     private Node root;
 
-    // Düğümün yüksekliğini hesaplamak
+    // Düğümün yüksekliği için düğüm içinde de bir field tanımlı
     private int height(Node node) {
         if (node == null)
             return 0;
         return node.height;
     }
 
-    // Düğümün denge faktörünü hesaplamak
+    // Düğümün denge faktörü sağ sol arası yükselik farkı ile bulunur
     private int getBalance(Node node) {
         if (node == null)
             return 0;
@@ -37,7 +26,7 @@ public class AVLTree {
         y.left = z;
         z.right = T2;
 
-        // Yükseklik güncellemeleri
+        // rotasyon sırasında yükselikler değisecek
         z.height = Math.max(height(z.left), height(z.right)) + 1;
         y.height = Math.max(height(y.left), height(y.right)) + 1;
 
@@ -153,5 +142,17 @@ public class AVLTree {
         // Dengeyi kontrol etmek için in-order traversal
         System.out.println("In-order traversal of AVL tree:");
         tree.inorder(); // Çıktı: 10 20 25 30 40 50 60
+    }
+}
+
+// düğüm yapısı
+class Node {
+    int key;
+    Node left, right;
+    int height;
+
+    public Node(int key) {
+        this.key = key;
+        this.height = 1;
     }
 }
