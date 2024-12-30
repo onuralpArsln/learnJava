@@ -74,7 +74,7 @@ Ardından dengeyi sağlayan rotasyon
 
 
 
-+ LL Rotasyonu: Sol alt ağacın sol dalındaki dengesizlik.
++  LL Rotasyonu: Sol alt ağacın sol dalındaki dengesizlik.
 + LR Rotasyonu: Sol alt ağacın sağ dalındaki dengesizlik.
 + RR Rotasyonu: Sağ alt ağacın sağ dalındaki dengesizlik.
 + RL Rotasyonu: Sağ alt ağacın sol dalındaki dengesizlik.
