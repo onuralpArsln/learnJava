@@ -3,6 +3,11 @@ public class InterfaceUser {
     public static void main(String[] args) {
         Teacher mahmut = new Teacher();
         mahmut.assignHomework();
+
+    }
+
+    public void listen(ITeaching teacher) {
+
     }
 }
 
