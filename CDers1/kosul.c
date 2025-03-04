@@ -3,7 +3,7 @@
 int main()
 {
     int sayi = 10;
-
+ 
     if (sayi > 5)
     {
         printf("Sayi  büyük.\n");
