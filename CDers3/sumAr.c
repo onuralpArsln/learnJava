@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int sumArray(int arr[], int size)
 {
     int sum = 0;
@@ -28,6 +30,8 @@ int main()
 
     int sum = sumArray(myArray, size);
     int max = findMax(myArray, size);
+    printf("%d\n", sum);
+    printf("%d", max);
 
     return 0;
 }
