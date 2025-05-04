@@ -50,29 +50,25 @@ class Travler:
             queue.pop(0)
         return []          
 
-    def dfs(self,nodes,target):
-      
-        visited = set()      #yine de bi baksak mı 
+    def dfs(self, nodes, target, visited=None, path=None):
+        if visited is None:
+            visited = set()
+        if path is None:
+            path = [self.currentNode]
 
-        
-        if self.currentNode == target: 
-            return self.memo #baştan yapıyoz ki aramasın targetsa
-        
-        for i in self.roads(nodes): #i gidebileceğimiz node
-            if i in visited:
-                continue
-            self.currentNode = i
-            self.memo.append(i)
-            visited.add(i)
+        visited.add(self.currentNode)
 
-            result= self.dfs(nodes,target)   
-            if result: 
-                return result  
-            
-            while set(self.roads(nodes)).issubset(visited):
-                self.backtrack()
-                print("backed")
-        return None #hedef bulunamazsa 
+        if self.currentNode == target:
+            return path
+
+        for neighbor in self.roads(nodes):
+            if neighbor not in visited:
+                next_traveler = Travler(neighbor)
+                result = next_traveler.dfs(nodes, target, visited.copy(), path + [neighbor])
+                if result:
+                    return result
+
+        return None
 
 if __name__ == "__main__":
     testTravelar = Travler("a")
