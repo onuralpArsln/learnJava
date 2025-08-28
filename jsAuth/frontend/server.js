@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Session ayarı
 app.use(
     session({
-        secret: "supersecret", // production’da .env’den al
+        secret: "supersecretkey", // production’da .env’den al
         resave: false,
         saveUninitialized: false,
     })

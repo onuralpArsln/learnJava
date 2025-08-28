@@ -16,6 +16,7 @@ const users = [
 app.post("/login", (req, res) => {
     const { username, password } = req.body;
 
+    // for each u in users
     const user = users.find(
         (u) => u.username === username && u.password === password
     );
