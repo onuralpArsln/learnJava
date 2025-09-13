@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>People List</title>
+</head>
+
+<body>
+    <h2>People List</h2>
+    <ul id="people"></ul>
+
+    <script>
+        async function loadPeople() {
+            const res = await fetch("/list-data");
+            const people = await res.json();
+            const ul = document.getElementById("people");
+            ul.innerHTML = "";
+            people.forEach(p => {
+                const li = document.createElement("li");
+                li.textContent = `${p.id}: ${p.name} ${p.surname}`;
+                ul.appendChild(li);
+            });
+        }
+        loadPeople();
+    </script>
+</body>
+
+</html>

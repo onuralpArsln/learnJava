@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Project</title>
+
+    <style>
+        .page {
+            display: flexbox;
+            justify-items: center;
+            align-content: center;
+            width: 100vw;
+            height: 100vh;
+            border: solid green 1px
+        }
+
+        .messageBox {
+            width: 40%;
+            height: 700px;
+            background: beige;
+            border: 1px solid black;
+            border-radius: 15%;
+            display: flexbox;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+
+
+            flex-direction: column;
+        }
+
+        .userMessage {
+            background-color: aquamarine;
+            width: 300px;
+            height: 50px;
+            margin: 20px;
+            margin-left: 200px;
+        }
+
+        .botMessage {
+            background-color: green;
+            width: 300px;
+            height: 50px;
+            margin: 20px;
+            margin-right: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="messageBox">
+
+            <div class="userMessage"></div>
+
+            <div class="botMessage"></div>
+
+            <div class="userMessage"></div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

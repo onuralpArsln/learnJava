@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Person</title>
+</head>
+
+<body>
+    <h2>Add Person</h2>
+    <form id="addForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="surname" placeholder="Surname" required>
+        <button type="submit">Save</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById("addForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const surname = document.getElementById("surname").value;
+
+            const res = await fetch("/add", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, surname })
+            });
+
+            const data = await res.json();
+            document.getElementById("result").textContent =
+                data.error ? data.error : `Added: ${data.name} ${data.surname}`;
+        });
+    </script>
+</body>
+
+</html>
