@@ -1,0 +1,80 @@
+CREATE DATABASE Lab1;     # DB oluştur 
+
+USE Lab1; # Kullanılacak DByi Seç
+
+SELECT name FROM sys.databases;  # mevcut dbleri gör 
+
+SELECT DB_NAME(); # kullandığın db yi gör
+
+DROP DATABASE Lab1;  #delete db 
+
+EXEC sp_tables; #tableları gör 
+
+DROP TABLE Movies; # Table sil 
+
+$$$$ Table Creation 
+
+CREATE TABLE Movies (
+    ID INT IDENTITY(1,1),           -- auto-incrementing movie ID
+    title VARCHAR(50) NOT NULL,
+    year INT,
+    length DECIMAL(8,2),            -- 6 digits before + 2 after decimal
+    studioName VARCHAR(30),
+    producerID INT,
+    PRIMARY KEY (ID, title)
+);
+
+$$$$$$ Insert DATA
+
+INSERT INTO Movies (title, year, length, studioName, producerID) VALUES
+('Star Wars', 1977, 124.21, 'Lucasfilm', 101),
+('Titanic', 1997, 12541.30, NULL, 122),
+('Inception', 2010, NULL, NULL, 101),
+('Harry Potter', 2010, 200.12, 'Warner', 547);
+
+
+$$$$$Update DATA
+
+UPDATE Movies SET studioName = 'Paramount' WHERE title = 'Titanic';
+
+UPDATE Movies SET length = 148.50 WHERE title = 'Inception';
+
+$$$$Search DAta
+
+SELECT * FROM Movies;
+
+SELECT * 
+FROM Movies
+WHERE year = 2010;
+
+
+SELECT title, year, length
+FROM Movies
+WHERE length > 200;
+
+
+SELECT * 
+FROM Movies
+ORDER BY year DESC;
+
+$$$$$Delete DAta
+
+DELETE FROM Movies
+WHERE title = 'Harry Potter';
+
+
+DELETE FROM Movies; #Delete all
+TRUNCATE TABLE Movies; # Delete and reset ID Counter
+
+$$$$Add table column
+
+ALTER TABLE Movies ADD rating INT DEFAULT 5;   # Adds new column old row are null
+ALTER TABLE Movies ADD rating INT DEFAULT 5 WITH VALUES; # Adds new column old row are filled with default value 
+
+ 
+
+
+
+
+
+
